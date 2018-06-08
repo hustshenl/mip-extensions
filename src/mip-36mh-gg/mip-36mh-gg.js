@@ -1,5 +1,5 @@
 /**
- * @file 自定义广告组件
+ * @file 36漫画广告轮播组件
  *
  * @author shen@shenl.com
  * @version 1.0.0
@@ -12,15 +12,12 @@ define(function (require) {
 
     function render() {
         var element = this.element;
-        var src = element.getAttribute('data-src');
         var node = document.createElement('script');
         node.type = 'text/javascript';
-        node.src = src;
+        node.src = 'https://www.36mh.com/bd/a-36mh.js';
         node.async = 'async';
         $(element).append(node);
     }
-
     customElement.prototype.build = render;
-
     return customElement;
 });
